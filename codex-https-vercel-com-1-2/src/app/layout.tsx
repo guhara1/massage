@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "케어링크 | 수원 용인 성남 출장마사지 제휴업체 지역 안내",
   description: "수원시, 용인시, 성남시 출장마사지 제휴업체를 행정구와 행정동 기준으로 확인하고 0508-202-4683으로 바로 전화 연결할 수 있는 지역 기반 방문마사지 안내 플랫폼입니다.",
   keywords: ["출장마사지", "수원 출장마사지", "용인 출장마사지", "성남 출장마사지", "방문마사지", "홈케어 마사지", "제휴업체"],
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
   verification: {
     google: "X93GGlzAy5MWuA-HXEijTHTQCYAIa3_j7FVZKL1k9pg",
     other: {
