@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CheckCircle2, PhoneCall, ShieldCheck, Sparkles } from "lucide-react";
+import { PhoneCall, ShieldCheck, Sparkles } from "lucide-react";
 
 const brand = "마사지매니아";
 const phoneNumber = "0508-202-4683";
@@ -81,7 +81,6 @@ export default function CoursesPage() {
             <article className="course-card" id={title} key={title}>
               <div className="course-card-header">
                 <h3>{title}</h3>
-                <span><CheckCircle2 size={16} /> 확인 필요</span>
               </div>
               <p>{description}</p>
             </article>
