@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1120" viewBox="0 0 960 1120" role="img" aria-labelledby="title desc">
+  <title id="title">수원, 용인, 성남 서비스 지역 지도</title>
+  <desc id="desc">경기 남부 세 도시와 행정구 매칭 구조를 보여주는 추상 지도</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8f1df"/>
+      <stop offset="1" stop-color="#dcebe4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#1f2933" flood-opacity=".2"/>
+    </filter>
+  </defs>
+  <rect width="960" height="1120" fill="url(#paper)"/>
+  <path d="M122 160 C248 66 430 84 526 172 C638 276 566 386 678 470 C790 556 838 688 754 800 C660 926 462 1012 304 928 C174 860 92 712 140 574 C182 452 18 296 122 160Z" fill="#fdfcf8" opacity=".82" filter="url(#shadow)"/>
+  <path d="M244 210 C342 152 458 184 524 260 C604 352 538 486 430 508 C298 536 190 452 184 338 C180 286 204 236 244 210Z" fill="#e1f2ec" stroke="#167a72" stroke-width="4"/>
+  <path d="M564 342 C692 348 786 438 794 556 C802 676 708 748 592 730 C472 712 398 616 422 506 C442 414 488 350 564 342Z" fill="#f2e5c4" stroke="#b98b2f" stroke-width="4"/>
+  <path d="M266 612 C378 562 510 610 552 728 C594 846 496 926 382 916 C260 906 164 820 180 714 C188 662 216 634 266 612Z" fill="#eadfd9" stroke="#d66a5c" stroke-width="4"/>
+  <g font-family="Arial, sans-serif" font-weight="800" letter-spacing="0" fill="#1f2933">
+    <text x="315" y="314" font-size="52" text-anchor="middle">성남시</text>
+    <text x="609" y="548" font-size="52" text-anchor="middle">용인시</text>
+    <text x="357" y="760" font-size="52" text-anchor="middle">수원시</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#52606d">
+    <text x="274" y="380">수정구 · 중원구 · 분당구</text>
+    <text x="514" y="615">처인구 · 기흥구 · 수지구</text>
+    <text x="245" y="828">장안구 · 권선구 · 팔달구 · 영통구</text>
+  </g>
+  <g fill="#167a72">
+    <circle cx="332" cy="248" r="16"/>
+    <circle cx="468" cy="374" r="13"/>
+    <circle cx="640" cy="464" r="16"/>
+    <circle cx="584" cy="664" r="13"/>
+    <circle cx="286" cy="690" r="16"/>
+    <circle cx="430" cy="842" r="13"/>
+  </g>
+  <g fill="none" stroke="#315c8c" stroke-width="10" stroke-linecap="round" opacity=".32">
+    <path d="M274 436 C390 486 498 526 640 616"/>
+    <path d="M442 344 C400 482 356 602 326 730"/>
+    <path d="M510 246 C586 308 650 374 720 458"/>
+  </g>
+  <rect x="98" y="940" width="764" height="96" rx="8" fill="#111827" opacity=".92"/>
+  <text x="146" y="999" font-family="Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">시 → 행정구 → 행정동 3단계 매칭</text>
+  <text x="146" y="1032" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#d1d5db">수원 · 용인 · 성남 우선 운영</text>
+</svg>
