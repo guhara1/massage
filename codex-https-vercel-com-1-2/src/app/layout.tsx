@@ -33,22 +33,6 @@ const structuredData = {
   ],
 };
 
-const vipBannerScript = `
-(function () {
-  if (window.location.pathname !== "/") return;
-  if (document.querySelector(".vip-top-banner")) return;
-  var topbar = document.querySelector(".topbar");
-  if (!topbar) return;
-  var banner = document.createElement("a");
-  banner.className = "vip-top-banner";
-  banner.href = "tel:05082024683";
-  banner.setAttribute("aria-label", "VIP 출장마사지 0508-202-4683 바로 전화");
-  banner.style.cssText = "display:block;width:min(1180px,calc(100% - 32px));margin:8px auto 0;border-radius:8px;overflow:hidden;background:#050608;box-shadow:0 18px 45px rgba(31,41,51,.16);line-height:0";
-  banner.innerHTML = '<img src="/vip-banner.svg" alt="분당 성남 용인 VIP 출장마사지 0508-202-4683" style="display:block;width:100%;height:auto;max-height:170px;object-fit:cover;object-position:center" />';
-  topbar.insertAdjacentElement("afterend", banner);
-})();
-`;
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: "케어링크",
@@ -97,8 +81,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="ko">
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <a className="vip-top-banner" href="tel:05082024683" aria-label="VIP 출장마사지 0508-202-4683 바로 전화">
+          <img src="/vip-banner.svg" alt="분당 성남 용인 VIP 출장마사지 0508-202-4683" />
+        </a>
         {children}
-        <script dangerouslySetInnerHTML={{ __html: vipBannerScript }} />
       </body>
     </html>
   );
