@@ -10,35 +10,25 @@ function addCourseNav(content) {
 }
 
 function improveMainTrustSection(content) {
+  content = content.replace(/<section className="section eeat-section">[\s\S]*?<\/section>\n\n      <section className="section"><div className="notice">/, `<section className="section eeat-section"><div className="section-heading"><h2>운영 정보 공개</h2><p>마사지매니아는 이용자가 예약 전에 확인해야 할 지역 범위, 요금 기준, 상담 연결, 운영 원칙을 한 화면에서 확인할 수 있도록 정리했습니다.</p></div><div className="eeat-grid"><article><strong>지역 기준</strong><h3>행정동 단위 안내</h3><p>수원, 용인, 성남을 시·구·동 기준으로 나누어 현재 위치와 가까운 지역 정보를 빠르게 확인할 수 있게 구성했습니다.</p></article><article><strong>요금 기준</strong><h3>코스와 금액 확인</h3><p>예약 전 코스 시간, 기본 금액, 추가 이동비, 후불 조건을 전화 상담에서 먼저 확인하도록 안내합니다.</p></article><article><strong>페이지 기준</strong><h3>지역별 상세 페이지</h3><p>선택한 시·구·동에 맞는 상세 페이지로 이동해 지역별 가능 업체와 상담 정보를 확인할 수 있습니다.</p></article><article><strong>상담 원칙</strong><h3>전화 상담 기준</h3><p>모든 배너와 업체 카드에서 {phoneNumber} 바로 전화를 제공하며, 부적절한 요청은 상담 범위에서 제외합니다.</p></article></div></section>
+
+      <section className="section"><div className="notice">`);
+
   return content
-    .split('E-E-A-T 운영 기준')
-    .join('운영 정보 공개')
-    .split('경험, 전문성, 권위성, 신뢰성을 강화하기 위해 지역 구조, 가격 기준, 전화 연결, 운영 정책을 명확하게 공개합니다.')
-    .join('이용자가 예약 전에 확인해야 할 지역 범위, 요금 기준, 상담 연결, 운영 원칙을 한 화면에서 확인할 수 있도록 정리했습니다.')
-    .split('Experience')
-    .join('지역 기준')
-    .split('Expertise')
-    .join('요금 기준')
-    .split('Authoritativeness')
-    .join('페이지 기준')
-    .split('Trust')
-    .join('상담 원칙')
-    .split('지역별 실제 흐름')
-    .join('행정동 단위 안내')
-    .split('수원, 용인, 성남을 시·구·동 기준으로 나누어 고객이 실제 검색하는 지역 단위와 맞춥니다.')
-    .join('수원, 용인, 성남을 시·구·동 기준으로 나누어 현재 위치와 가까운 지역 정보를 빠르게 확인할 수 있게 구성했습니다.')
-    .split('가격과 코스 공개')
-    .join('코스와 금액 확인')
-    .split('60분 9만원, 90분 12~15만원, 120분 VIP·스페셜 18만원 기준으로 비교가 쉽도록 구성했습니다.')
-    .join('예약 전 코스 시간, 기본 금액, 추가 이동비, 후불 조건을 전화 상담에서 먼저 확인하도록 안내합니다.')
-    .split('고유 지역 페이지')
-    .join('지역별 상세 페이지')
-    .split('정자동, 인계동, 기흥, 판교 등 주요 지역은 고유 타이틀과 설명을 가진 상세 페이지로 연결됩니다.')
-    .join('선택한 시·구·동에 맞는 상세 페이지로 이동해 지역별 가능 업체와 상담 정보를 확인할 수 있습니다.')
-    .split('전화와 정책 공개')
-    .join('전화 상담 기준')
-    .split('모든 배너와 업체 카드에서 {phoneNumber} 바로 전화를 제공하고 합법 운영 정책을 반복 안내합니다.')
-    .join('모든 배너와 업체 카드에서 {phoneNumber} 바로 전화를 제공하며, 부적절한 요청은 상담 범위에서 제외합니다.');
+    .split('E-E-A-T 운영 기준').join('운영 정보 공개')
+    .split('경험, 전문성, 권위성, 신뢰성을 강화하기 위해 지역 구조, 가격 기준, 전화 연결, 운영 정책을 명확하게 공개합니다.').join('이용자가 예약 전에 확인해야 할 지역 범위, 요금 기준, 상담 연결, 운영 원칙을 한 화면에서 확인할 수 있도록 정리했습니다.')
+    .split('Experience').join('지역 기준')
+    .split('Expertise').join('요금 기준')
+    .split('Authoritativeness').join('페이지 기준')
+    .split('Trust').join('상담 원칙')
+    .split('지역별 실제 흐름').join('행정동 단위 안내')
+    .split('수원, 용인, 성남을 시·구·동 기준으로 나누어 고객이 실제 검색하는 지역 단위와 맞춥니다.').join('수원, 용인, 성남을 시·구·동 기준으로 나누어 현재 위치와 가까운 지역 정보를 빠르게 확인할 수 있게 구성했습니다.')
+    .split('가격과 코스 공개').join('코스와 금액 확인')
+    .split('60분 9만원, 90분 12~15만원, 120분 VIP·스페셜 18만원 기준으로 비교가 쉽도록 구성했습니다.').join('예약 전 코스 시간, 기본 금액, 추가 이동비, 후불 조건을 전화 상담에서 먼저 확인하도록 안내합니다.')
+    .split('고유 지역 페이지').join('지역별 상세 페이지')
+    .split('정자동, 인계동, 기흥, 판교 등 주요 지역은 고유 타이틀과 설명을 가진 상세 페이지로 연결됩니다.').join('선택한 시·구·동에 맞는 상세 페이지로 이동해 지역별 가능 업체와 상담 정보를 확인할 수 있습니다.')
+    .split('전화와 정책 공개').join('전화 상담 기준')
+    .split('모든 배너와 업체 카드에서 {phoneNumber} 바로 전화를 제공하고 합법 운영 정책을 반복 안내합니다.').join('모든 배너와 업체 카드에서 {phoneNumber} 바로 전화를 제공하며, 부적절한 요청은 상담 범위에서 제외합니다.');
 }
 
 function improveCourseTrustSection(content) {
