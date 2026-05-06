@@ -3,6 +3,36 @@ import "./globals.css";
 
 const siteUrl = "https://massage-tawny-five.vercel.app";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "케어링크",
+      url: siteUrl,
+      logo: `${siteUrl}/favicon.svg`,
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "0508-202-4683",
+        contactType: "customer support",
+        areaServed: "KR",
+        availableLanguage: "ko",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "케어링크",
+      inLanguage: "ko-KR",
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: "케어링크",
@@ -47,5 +77,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ko"><body>{children}</body></html>;
+  return (
+    <html lang="ko">
+      <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        {children}
+      </body>
+    </html>
+  );
 }
