@@ -1,10 +1,31 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = "https://massage-tawny-five.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  applicationName: "케어링크",
   title: "케어링크 | 수원 용인 성남 출장마사지 제휴업체 지역 안내",
   description: "수원시, 용인시, 성남시 출장마사지 제휴업체를 행정구와 행정동 기준으로 확인하고 0508-202-4683으로 바로 전화 연결할 수 있는 지역 기반 방문마사지 안내 플랫폼입니다.",
   keywords: ["출장마사지", "수원 출장마사지", "용인 출장마사지", "성남 출장마사지", "방문마사지", "홈케어 마사지", "제휴업체"],
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -18,6 +39,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "케어링크 | 수원 용인 성남 출장마사지 제휴업체",
     description: "시, 행정구, 행정동별 출장마사지 제휴업체와 전화 연결 정보를 확인하세요.",
+    url: siteUrl,
+    siteName: "케어링크",
     locale: "ko_KR",
     type: "website",
   },
