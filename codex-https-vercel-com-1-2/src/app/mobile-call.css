@@ -1,0 +1,36 @@
+.mobile-call-bar {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: 86px;
+  }
+
+  .mobile-call-bar {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 58px;
+    border-radius: 8px;
+    background: #167a72;
+    color: #fff;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.26);
+    font-weight: 900;
+    letter-spacing: 0;
+  }
+
+  .mobile-call-bar span {
+    font-size: 17px;
+  }
+
+  .mobile-call-bar strong {
+    font-size: 16px;
+  }
+}
