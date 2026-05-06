@@ -1,6 +1,45 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-export default function AreaLayout({ children }: { children: ReactNode }) {
+const siteUrl = "https://massage-tawny-five.vercel.app";
+
+type AreaParams = {
+  city: string;
+  district: string;
+  neighborhood: string;
+};
+
+type AreaLayoutProps = {
+  children: ReactNode;
+  params: Promise<AreaParams>;
+};
+
+export async function generateMetadata({ params }: AreaLayoutProps): Promise<Metadata> {
+  const { city, district, neighborhood } = await params;
+  const canonicalPath = `/area/${decodeURIComponent(city)}/${decodeURIComponent(district)}/${decodeURIComponent(neighborhood)}`;
+
+  return {
+    alternates: {
+      canonical: canonicalPath,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+    openGraph: {
+      url: new URL(canonicalPath, siteUrl).toString(),
+    },
+  };
+}
+
+export default function AreaLayout({ children }: AreaLayoutProps) {
   return (
     <>
       <style>{`
