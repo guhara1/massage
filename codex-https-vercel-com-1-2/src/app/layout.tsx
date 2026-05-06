@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./course-visibility.css";
 import "./mobile-call.css";
 
 const siteUrl = "https://massage-tawny-five.vercel.app";
