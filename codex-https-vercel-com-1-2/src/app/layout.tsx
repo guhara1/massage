@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./mobile-call.css";
 
 const siteUrl = "https://massage-tawny-five.vercel.app";
 
@@ -11,7 +12,7 @@ const structuredData = {
       "@id": `${siteUrl}/#organization`,
       name: "케어링크",
       url: siteUrl,
-      logo: `${siteUrl}/favicon.svg",
+      logo: `${siteUrl}/favicon.svg`,
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "0508-202-4683",
