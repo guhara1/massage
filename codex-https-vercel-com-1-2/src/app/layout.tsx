@@ -2,18 +2,17 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "케어링크 | 경기 남부 출장마사지 중개",
-  description: "수원시, 용인시, 성남시의 시-구-동 3단계 지역 기반 출장마사지 예약 중개 플랫폼",
+  title: "케어링크 | 수원 용인 성남 출장마사지 제휴업체 지역 안내",
+  description: "수원시, 용인시, 성남시 출장마사지 제휴업체를 행정구와 행정동 기준으로 확인하고 0508-202-4683으로 바로 전화 연결할 수 있는 지역 기반 방문마사지 안내 플랫폼입니다.",
+  keywords: ["출장마사지", "수원 출장마사지", "용인 출장마사지", "성남 출장마사지", "방문마사지", "홈케어 마사지", "제휴업체"],
+  openGraph: {
+    title: "케어링크 | 수원 용인 성남 출장마사지 제휴업체",
+    description: "시, 행정구, 행정동별 출장마사지 제휴업체와 전화 연결 정보를 확인하세요.",
+    locale: "ko_KR",
+    type: "website",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="ko">
-      <body>{children}</body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="ko"><body>{children}</body></html>;
 }
