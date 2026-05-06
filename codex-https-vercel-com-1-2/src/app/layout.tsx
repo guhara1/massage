@@ -11,7 +11,7 @@ const structuredData = {
       "@id": `${siteUrl}/#organization`,
       name: "케어링크",
       url: siteUrl,
-      logo: `${siteUrl}/favicon.svg`,
+      logo: `${siteUrl}/favicon.svg",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "0508-202-4683",
@@ -81,10 +81,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="ko">
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-        <a className="vip-top-banner" href="tel:05082024683" aria-label="VIP 출장마사지 0508-202-4683 바로 전화">
-          <img src="/vip-banner.svg" alt="분당 성남 용인 VIP 출장마사지 0508-202-4683" />
-        </a>
         {children}
+        <a className="mobile-call-bar" href="tel:05082024683" aria-label="0508-202-4683 전화예약">
+          <span>전화예약</span>
+          <strong>0508-202-4683</strong>
+        </a>
       </body>
     </html>
   );
