@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "마사지코스 안내 | 마사지매니아",
     description: "출장마사지 예약 전 확인할 스웨디시, 타이, 로미로미, 아로마, 스포츠, 발, 커플 마사지 코스 기준 안내.",
-    url: "https://massage-tawny-five.vercel.app/courses",
+    url: "https://massage1-tawny-five.vercel.app/courses",
     siteName: "마사지매니아",
     locale: "ko_KR",
     type: "article",

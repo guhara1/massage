@@ -3,7 +3,7 @@ import "./globals.css";
 import "./course-visibility.css";
 import "./mobile-call.css";
 
-const siteUrl = "https://massage-tawny-five.vercel.app";
+const siteUrl = "https://massage1-tawny-five.vercel.app";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   verification: {
     google: "X93GGlzAy5MWuA-HXEijTHTQCYAIa3_j7FVZKL1k9pg",
     other: {
-      "naver-site-verification": "d86bf53460b81e60e0ea3fdd9b6b3f28231d1d9f",
+      "naver-site-verification": "24b8c68b9481e2a084e4ffe96875a78215e414e5",
     },
   },
   openGraph: {

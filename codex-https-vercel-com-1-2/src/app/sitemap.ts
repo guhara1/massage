@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://massage-tawny-five.vercel.app";
+const siteUrl = "https://massage1-tawny-five.vercel.app";
 
 const regions: Record<string, Record<string, string[]>> = {
   수원시: {
@@ -21,7 +21,7 @@ const regions: Record<string, Record<string, string[]>> = {
   },
 };
 
-const staticPaths = ["/", "/about", "/contact", "/privacy", "/terms", "/partner-guidelines", "/safety-policy"];
+const staticPaths = ["/", "/courses", "/about", "/contact", "/privacy", "/terms", "/partner-guidelines", "/safety-policy"];
 
 function getAreaPaths() {
   return Object.entries(regions).flatMap(([city, districts]) =>
@@ -38,8 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPaths.map((path) => ({
       url: new URL(path, siteUrl).toString(),
       lastModified,
-      changeFrequency: path === "/" ? "daily" as const : "monthly" as const,
-      priority: path === "/" ? 1 : 0.6,
+      changeFrequency:
+        path === "/" ? "daily" as const : path === "/courses" ? "weekly" as const : "monthly" as const,
+      priority: path === "/" ? 1 : path === "/courses" ? 0.8 : 0.6,
     })),
     ...getAreaPaths().map((path) => ({
       url: new URL(path, siteUrl).toString(),
