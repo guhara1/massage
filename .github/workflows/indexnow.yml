@@ -1,0 +1,41 @@
+name: IndexNow ping
+
+# main 에 푸시(=글 추가/수정)될 때마다 빙·네이버에 자동으로 색인을 통보합니다.
+# Vercel 배포가 끝날 시간을 잠깐 준 뒤, 라이브 sitemap.xml 기준으로 전송합니다.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "codex-https-vercel-com-1-2/src/app/**"
+      - "codex-https-vercel-com-1-2/public/**"
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "특정 URL만 통보(비우면 사이트맵 전체)"
+        required: false
+        default: ""
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Vercel 배포 반영 대기
+        run: sleep 90
+
+      - name: IndexNow 통보
+        env:
+          SITE_URL: https://massage1-tawny-five.vercel.app
+          INDEXNOW_KEY: 979b28a2b9f84727a34e73a44db9fa16
+        run: |
+          if [ -n "${{ github.event.inputs.url }}" ]; then
+            python tools/indexnow.py "${{ github.event.inputs.url }}"
+          else
+            python tools/indexnow.py
+          fi
