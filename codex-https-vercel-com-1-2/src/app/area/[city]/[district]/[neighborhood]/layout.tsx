@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const siteUrl = "https://massage-tawny-five.vercel.app";
+const siteUrl = "https://massage1-tawny-five.vercel.app";
 
 type AreaParams = {
   city: string;

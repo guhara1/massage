@@ -3,7 +3,7 @@ import "./globals.css";
 import "./course-visibility.css";
 import "./mobile-call.css";
 
-const siteUrl = "https://massage-tawny-five.vercel.app";
+const siteUrl = "https://massage1-tawny-five.vercel.app";
 
 const structuredData = {
   "@context": "https://schema.org",
